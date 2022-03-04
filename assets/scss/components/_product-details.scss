@@ -62,7 +62,7 @@
                             content: "";
                             height: 1px;
                             width: 0;
-                            background: blue;
+                            background: $color-blue;
                             position: absolute;
                             left: 100%;
                             top: 50%;
@@ -77,8 +77,8 @@
                     width: 30px;
                     line-height: 30px;
                     text-align: center;
-                    color: blue;
-                    border: 2px solid blue;
+                    color: $color-blue;
+                    border: 2px solid $color-blue;
                     border-radius: 100%;
                     display: inline-block;
                     background: #fff;
@@ -112,7 +112,7 @@
                     opacity: 0;
                     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
                     filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-                    border: 2px solid blue;
+                    border: 2px solid $color-blue;
                     border-radius: 100%;
                     right: -50%;
                     bottom: -50%;
@@ -149,7 +149,7 @@
                         }
                     }
                     .indicator {
-                        background: blue;
+                        background: $color-blue;
                         color: #fff;
                         border-color: #fff;
                     }
@@ -184,9 +184,10 @@
         padding-top: 100px;
 
         h2 {
-            font-size: 30px;
-            font-weight: 700;
-            color: darkblue;
+            font-size: 35px;
+            font-weight: 800;
+            color: $color-blue;
+            line-height: 40px;
         }
         p {
             padding: 30px 0;

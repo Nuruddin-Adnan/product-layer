@@ -1,5 +1,5 @@
 /*=== abstracts css start === */
-@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap");
 /*===// end of abstracts css === */
 /*=== base css start === */
 * {
@@ -29,7 +29,7 @@ a, a:hover {
 }
 
 body {
-  font-family: 'Libre Franklin', sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   font-size: 16px;
   font-weight: 400;
   color: #000;
@@ -203,7 +203,7 @@ body {
     content: "";
     height: 1px;
     width: 0;
-    background: blue;
+    background: #212562;
     position: absolute;
     left: 100%;
     top: 50%;
@@ -219,8 +219,8 @@ body {
   width: 30px;
   line-height: 30px;
   text-align: center;
-  color: blue;
-  border: 2px solid blue;
+  color: #212562;
+  border: 2px solid #212562;
   border-radius: 100%;
   display: inline-block;
   background: #fff;
@@ -273,7 +273,7 @@ body {
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  border: 2px solid blue;
+  border: 2px solid #212562;
   border-radius: 100%;
   right: -50%;
   bottom: -50%;
@@ -309,7 +309,7 @@ body {
 }
 
 .product-details .product-img-box li .indicator-full.active .indicator {
-  background: blue;
+  background: #212562;
   color: #fff;
   border-color: #fff;
 }
@@ -332,9 +332,10 @@ body {
 }
 
 .product-details .product-information h2 {
-  font-size: 30px;
-  font-weight: 700;
-  color: darkblue;
+  font-size: 35px;
+  font-weight: 800;
+  color: #212562;
+  line-height: 40px;
 }
 
 .product-details .product-information p {
