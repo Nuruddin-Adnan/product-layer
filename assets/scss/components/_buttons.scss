@@ -1,0 +1,81 @@
+.layer-chagne-btn {
+    color: $color-black;
+    display: inline-block;
+    position: relative;
+    border: none;
+    background: $color-white;
+    border-radius: 0;
+
+    .badge {
+        border-radius: 25px;
+        background: red;
+        color: white;
+        position: absolute;
+        top: -12px;
+        right: 10px;
+    }
+
+   
+}
+
+.btn-group {
+    .btn-box{
+        padding: 2px;
+        background: rgba($color-black, 0.5);
+    }
+
+    .btn-box:first-child {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-top-left-radius: .4rem;
+        border-bottom-left-radius: .4rem;
+        padding-right: 0;
+
+        .layer-chagne-btn {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            border-top-left-radius: .4rem;
+            border-bottom-left-radius: .4rem;
+            &:focus {
+                box-shadow: none;
+            }
+        }
+
+        &.active {
+            padding-right: 2px;
+            background: linear-gradient(90deg, rgb(123, 195, 219), rgb(196, 86, 23));
+            .layer-chagne-btn {
+                background: linear-gradient(90deg, lightblue, rgb(221, 105, 28));
+            }
+        }
+
+    }
+    .btn-box:last-child {
+        border-top-right-radius: .4rem;
+        border-bottom-right-radius: .4rem;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        padding-left: 0;
+
+        .layer-chagne-btn {
+            border-top-right-radius: .4rem;
+            border-bottom-right-radius: .4rem;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            &:focus {
+                box-shadow: none;
+            }
+        }
+        
+
+        &.active {
+            padding-left: 2px;
+            background: linear-gradient(90deg, rgb(123, 195, 219), rgb(196, 86, 23));
+            .layer-chagne-btn {
+                background: linear-gradient(90deg, lightblue, rgb(221, 105, 28));
+            }
+        }
+    }
+
+    
+}

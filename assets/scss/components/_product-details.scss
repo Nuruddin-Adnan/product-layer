@@ -1,0 +1,202 @@
+.product-details {
+    .product-img-box {
+        padding: 100px 0;
+        transition: all 0.2s linear;
+
+        &.active {
+            margin-top: -16%;
+        }
+
+        li{
+            position: relative;
+            transition: all 0.2s linear;
+            margin-top: -16%;
+            cursor: pointer;
+         
+            &.active {
+                padding-top: 16%;
+                .layer-img {
+                    filter: saturate(1) !important;
+                }
+            }
+
+            &:hover {
+                .layer-img {
+                    filter: saturate(1) !important;
+                }
+            }
+
+            &:nth-child(1){
+                z-index: 6;
+                margin-top: 0;
+            }
+            &:nth-child(2){
+                z-index: 5
+            }
+            &:nth-child(3){
+                z-index: 4;
+            }
+            &:nth-child(4){
+                z-index: 3;
+            }
+            &:nth-child(5){
+                z-index: 2;
+            }
+            &:nth-child(6){
+                z-index: 1;
+            }
+
+             //   **********  indicator-full start ********** 
+            .indicator-full{
+                position: absolute;
+                bottom: 10%;
+                right: 20%;
+                transform: translate(0);
+                
+                .indicator-main {
+                    position: relative;
+                    display: inline-block;
+
+                    @media (min-width: 992px){
+                        &::before {
+                            content: "";
+                            height: 1px;
+                            width: 0;
+                            background: blue;
+                            position: absolute;
+                            left: 100%;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            transition: all 0.2s linear;
+                        }
+                    }
+                }
+        
+                .indicator {
+                    height: 30px;
+                    width: 30px;
+                    line-height: 30px;
+                    text-align: center;
+                    color: blue;
+                    border: 2px solid blue;
+                    border-radius: 100%;
+                    display: inline-block;
+                    background: #fff;
+                    z-index: 999;
+                }
+    
+                @keyframes waves {
+                    0% {
+                        -webkit-transform: scale(0.2, 0.2);
+                        transform: scale(0.2, 0.2);
+                        opacity: 0;
+                        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+                    }
+                    50% {
+                        opacity: 0.9;
+                        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+                    }
+                    100% {
+                        -webkit-transform: scale(1, 1);
+                        transform: scale(1, 1);
+                        opacity: 0;
+                        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+                    }
+                }
+            
+                .waves {
+                    position: absolute;
+                    width: 60px;
+                    height: 60px;
+                    background: transparent;
+                    opacity: 0;
+                    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+                    filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+                    border: 2px solid blue;
+                    border-radius: 100%;
+                    right: -50%;
+                    bottom: -50%;
+                    transform: translate(-50%, -50%);
+                    z-index: -1;
+                    -webkit-animation: waves 3s ease-in-out infinite;
+                    animation: waves 3s ease-in-out infinite;
+                }
+                        
+                .wave-1 {
+                    -webkit-animation-delay: 0s;
+                    animation-delay: 0s;
+                }
+        
+                .wave-2 {
+                    -webkit-animation-delay: .5s;
+                    animation-delay: .5s;
+                }
+        
+                .wave-3 {
+                    -webkit-animation-delay: 1s;
+                    animation-delay: 1s;
+                }
+                .wave-4 {
+                    -webkit-animation-delay: 2s;
+                    animation-delay: 2s;
+                }
+
+                  // li active wave change
+                &.active {
+                    .indicator-main {
+                        &::before {
+                            width: 300px;
+                        }
+                    }
+                    .indicator {
+                        background: blue;
+                        color: #fff;
+                        border-color: #fff;
+                    }
+                    .waves {
+                        display: none;
+                    }
+                }
+            }
+
+            &:nth-child(even){
+                .indicator-full{
+                   right: 10%;
+                }
+            }
+
+          
+            // ********** End of indicator-full ********** 
+        }
+
+        &:hover {
+            li {
+                .layer-img {
+                    filter: saturate(0.4);
+                }
+            }
+        }
+        
+    }
+
+    // ######## product information start ########
+    .product-information {
+        padding-top: 100px;
+
+        h2 {
+            font-size: 30px;
+            font-weight: 700;
+            color: darkblue;
+        }
+        p {
+            padding: 30px 0;
+
+            br {
+                content: "";
+                margin: 10px 0;
+                display: block;
+            }
+        }
+    }
+    // ########//end of product information ########
+}
