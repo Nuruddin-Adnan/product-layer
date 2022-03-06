@@ -11,7 +11,6 @@ const indicatorFull = document.querySelectorAll(".indicator-full");
 
 [...productImgItems].forEach((productItem, index) => {
     productItem.addEventListener('click', function(){
-        this.classList.add('active');
         productImgBox.classList.add('active');
 
         [...productImgItems].forEach((productItem) => {
@@ -37,6 +36,15 @@ const indicatorFull = document.querySelectorAll(".indicator-full");
         });
         [...productInformations][index].classList.add('d-block');
         [...productInformations][index].classList.remove('d-none');
+
+        // video autoplay
+        if([...productInformations][index].classList.contains('video-content')){
+            document.getElementById('video-1').play();
+            document.getElementById('video-2').play();
+        }else{
+            document.getElementById('video-1').pause();
+            document.getElementById('video-2').pause();
+        }
         
     });
 
