@@ -49,6 +49,16 @@ body {
 
 /*===// end of base css === */
 /*=== components css start === */
+.product-details {
+  padding: 20px 0 60px 0;
+}
+
+@media (min-width: 1400px) {
+  .product-details {
+    padding-left: 8.333%;
+  }
+}
+
 .product-details .product-img-box {
   padding-top: 100px;
   -webkit-transition: all 0.2s linear;
@@ -300,8 +310,6 @@ body {
 }
 
 /*===// end of components css === */
-/*=== layouts css start === */
-/*===// end of layouts css === */
 /*=== pages start === */
 /*===// end of pages  === */
 /*# sourceMappingURL=style.css.map */
